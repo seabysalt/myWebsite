@@ -1,0 +1,41 @@
+$light-color: #fafafafa;
+$primary-color: #3A6975;
+$secondary-color: #ff5b3e;
+$tertiary-color: #475f7f;
+$dark-text: #0a0a0a;
+$taupe: #333333;
+$grey: #c4c3c3;
+$white-transparent: #fafafa8c;
+
+$font-bold: 700;
+$font-regular: 500;
+$font-light: 400;
+
+// Setting my text color based on bg
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return $dark-text;
+  } @else {
+    @return $light-color;
+  }
+}
+
+// Setting my text and background color based on bg
+@mixin set-bg($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+@mixin set-flex-row($direction1, $direction2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $direction1;
+  align-items: $direction2;
+}
+
+@mixin set-flex-column($direction1, $direction2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $direction1;
+  align-items: $direction2;
+}

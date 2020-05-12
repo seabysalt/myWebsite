@@ -1,0 +1,107 @@
+.contact {
+  @include set-flex-row(space-between, center);
+
+  $background: #9BA59C;
+
+  &_background {
+    position: absolute;
+    left: 0;
+    top: 25vh;
+    width: 66vw;
+    height: 60vh;
+    background-color: $background;
+    animation: 1.3s fade-in ease-in-out;
+    z-index: 3;
+  }
+
+  h2 {
+    margin: 40px;
+    color: $light-color;
+  }
+
+  .postMessage {
+    @include set-flex-column(center, center);
+
+    h2 {
+      margin: 20px;
+      animation: 1.3s fade-in ease-in-out;
+    }
+  }
+
+  img {
+    object-fit: cover;
+    height: 100vh;
+    width: 40vw;
+    z-index: 2;
+  }
+
+  &_form {
+    position: relative;
+    width: 600px;
+    left: 30vw;
+    background-color: $light-color;
+    padding: 20px;
+    @include set-flex-column(center, center);
+    border: 3px solid $background;
+
+
+    form {
+      width: 100%;
+      height: 300px;
+      @include set-flex-column(space-evenly, flex-start);
+      z-index: 4;
+      padding: 10px 30px;
+      /*       border: 1px solid $background; */
+
+      label {
+        font-family: "gotham_medium";
+        color: $taupe;
+      }
+
+      input,
+      textarea {
+        border: none;
+        padding: 10px;
+        margin: 10px 0 10px 20px;
+        background-color: lighten($background, 20);
+        color: $taupe;
+        width: 300px;
+        font-family: "gotham_light";
+        font-size: 16px;
+      }
+
+      .message {
+        height: 80px;
+        resize: none;
+      }
+    }
+
+    button {
+      background-color: $background;
+      width: 200px;
+      height: 50px;
+      padding: 10px;
+      color: $light-color;
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      font-family: 'gotham_medium';
+      text-transform: uppercase;
+      font-size: 16px;
+      border: 1px solid $light-color;
+      cursor: pointer;
+    }
+
+    .alert {
+      font-family: "gotham_medium";
+      font-size: 14px;
+      position: absolute;
+      right: 30px;
+      top: 100px;
+      width: 120px;
+      height: 100px;
+      line-height: 30px;
+    }
+
+  }
+}

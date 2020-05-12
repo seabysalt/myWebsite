@@ -1,0 +1,126 @@
+#introSlides {
+  height: 93vh;
+  width: 100%;
+  margin-bottom: 7vh;
+
+  .background {
+    height: 100%;
+    width: 66%;
+
+    &_color {
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 93vh;
+      width: 66%;
+    }
+
+    &_fade-in {
+      animation: 1.3s fade-in ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 93vh;
+      width: 66%;
+    }
+  }
+
+  .text {
+    max-width: 420px;
+    position: absolute;
+    left: 100px;
+    top: 25vh;
+    color: $light-color;
+    z-index: 3;
+
+    h5 {
+      margin-bottom: 40px;
+    }
+
+  }
+
+  .text2 {
+    max-width: 550px;
+    position: absolute;
+    left: 100px;
+    top: 25vh;
+    color: $light-color;
+    z-index: 3;
+
+    h5 {
+      margin-bottom: 40px;
+    }
+  }
+
+  $size: 500px;
+
+  .image {
+    position: absolute;
+    left: 50%;
+    top: 20vh;
+    height: 400px;
+    width: 500px;
+
+    .images {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition-timing-function: cubic-bezier(.23,.11,.37,1);
+      transition-duration: 1200ms;
+      z-index: 2;
+    }
+
+    .images2 {
+      transform: rotateY(90deg);
+      
+    }
+
+    .images3 {
+      transform: rotateY(180deg);
+    }
+
+    &_sliding {
+      object-fit: cover;
+      width: inherit;
+      height: inherit;
+      position: absolute;
+    }
+
+    &_fade-in {
+      transform: translate3d(0, 0, $size/2);
+      z-index: 2;
+    }
+
+    &_fade-in-2{
+      transform: rotateY(-90deg) translate3d(0, 0, $size/2);
+    }
+
+    &_fade-in-3 {
+      transform: rotateY(180deg) translate3d(0, 0, $size/2);
+    }
+
+    &_control {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      height: 100px;
+      width: 30px;
+      color: $light-color;
+      font-family: "gotham_semi_bold";
+      z-index: 3;
+      @include set-flex-column(space-between, center);
+
+      &_text {
+        transform: rotate(90deg);
+        @include set-flex-row(space-between, center);
+        width: 60px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+}

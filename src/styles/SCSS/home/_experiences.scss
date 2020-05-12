@@ -1,0 +1,81 @@
+#experiences {
+  height: 100vh;
+  width: 100vw;
+  @include set-flex-row(center, center);
+  padding: 20px 40px;
+  margin-top: 94px;
+
+  .map {
+    flex: 1.5;
+
+    &_countries {
+      @include set-flex-row(space-evenly, center);
+      padding: 20px 0px;
+      align-content: center;
+
+      p {
+        color: lighten($dark-text, 35%);
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .active {
+        color: $secondary-color;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      .inactive:hover {
+        border-bottom: 2px solid $secondary-color;
+      }
+    }
+
+    &_detail {
+      padding: 0 50px;
+
+      .rsm-marker {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .text {
+    flex: 1;
+  }
+
+  h2 {
+    color: $secondary-color;
+    text-align: center;
+  }
+}
+
+.experience {
+
+  h2 {
+    margin: 0 0 30px 0;
+  }
+
+  &_details {
+    @include set-flex-row(space-between, flex-start);
+    color: $dark-text;
+    margin: 10px 0;
+
+
+    &_year {
+      color: $secondary-color;
+      font-family: 'gotham_medium';
+      width: 80px;
+    }
+
+    &_institution {
+      padding-left: 30px;
+      width: 35%;
+    }
+
+    &_title {
+      padding-left: 30px;
+      width: 50%;
+    }
+  }
+}

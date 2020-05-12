@@ -1,0 +1,208 @@
+import Experience from '../models/Experience';
+
+export const EXPERIENCES = [
+  new Experience(
+		9,
+		'2020',
+		'02/08-06/08',
+		'USA',
+		'Scenerie',
+		'Frontend Developer',
+		``,
+		'',
+		''
+  ),
+  new Experience(
+    18,
+    '2019',
+    '12/18-12/19',
+    'Germany',
+    'Center for Leadership & People Management',
+    'Quantitative Research on Psychological Capital (PsyCap)',
+    `As part of my master's thesis I researched at the center as part of the LMU in Munich.`,
+    'A+ (with distinction)',
+    'https://www.uni-konstanz.de/'
+  ),
+  new Experience(
+		15,
+		'2019',
+		'06/19-08/19',
+		'Germany',
+		'Ironhack',
+		'Scholarship-based web development student',
+		'Coding Bootcamp',
+		'MERN Stack: MongoDB, Express, React.JS, Node.JS; HTML5, CSS3, SASS, JavaScript; Agile Project Management, SCRUM methods',
+		'',
+		'https://www.ironhack.com'
+	),
+	new Experience(
+		11,
+		'2018/19',
+		'09/18-03/18',
+		'Germany',
+		'Personio',
+		'HRM Intern',
+		'Fast growing HR SaaS startup',
+		'Accomplishments: Coaching & developing leads: developing and conducting management & team lead trainings to junior& senior leads; Project management: mainly for cross-functional teams - organising, leading and moderating events with up to 120 attendees',
+		'',
+		'https://www.personio.com'
+  ),
+  new Experience(
+    17,
+    '2018/19',
+    '04/18-12/19',
+    'Germany',
+    'University of Konstanz',
+    'M.Sc. in Psychology',
+    'Finalized my studies in (clinical) Psychology.',
+    'A+ (with distinction)',
+    'https://www.uni-konstanz.de/'
+  ),
+	new Experience(
+		12,
+		'2017/18/19',
+		'04/17-12/19',
+		'Germany',
+		'Allerweil',
+		'Founder',
+		'Customized Bavarian Dresses Startup',
+		'Accomplishments: Founding & running my own business parallel to University; Offering the complete customer cycle: customer acquisition, designing, pattern-making, sewing, customer support',
+		'',
+		'https://www.allerweil.com'
+	),
+  new Experience(
+		4,
+		'2016/17/18',
+		'08/12-03/13',
+		'Germany',
+		'Ludwig-Maximilians-University (LMU Munich)',
+		'M.Sc. in Management',
+		`Munich has been the last station of my europan triple master's degree, where I specialized in Strategy & Change.`,
+		'A+',
+		''
+	),
+	new Experience(
+		1,
+		'2018',
+		'02/18-03/18',
+		'Ecuador',
+		'Andean Global Studies',
+		'Intensifying my spanish skills',
+		'Learning Spanish at the school, with a Ecuadorian family & while traveling',
+		'',
+		'',
+	),
+	new Experience(
+		7,
+		'2017',
+		'04/17-08/17',
+		'Tanzania',
+		'DI&PC & LMU Entrepreneurship Center',
+		'Impact Investment Research',
+		`I have researched in the field of impact investment in Sub-Saharan Africa as part of my master's thesis to define a new way of social impact investment based on a real-life model in cooperation with the LMU Entreprenurship Center in Munich.`,
+		'',
+		''
+	),
+	new Experience(
+		3,
+		'2015/16',
+		'08/12-03/13',
+		'France',
+		'EMLYON Business School',
+		'M.Sc. in Management (Grande École)',
+		'I absolved a grande école masters degree in Lyon as part of a European triple degree study program',
+		'A+',
+		''
+	),
+
+	new Experience(
+		8,
+		'2014',
+		'07/14-08/14',
+		'Tanzania',
+		'Canon Andrea Mwaka School',
+		'Mathematics & English Teacher at an International School',
+		`I have been teaching Mathematics and English at an international school in Dodoma`,
+		'',
+		''
+	),
+	new Experience(
+		13,
+		'2016/17',
+		'07/16-03/17',
+		'Germany',
+		'Konux',
+		'Junior Business Developer',
+		'Industrial IoT startup focused on predictive maintenance',
+		'Accomplishments: Pitching, recruiting & business case analysis; Website management: writing content & developing strategy for new website',
+		'',
+		'https://www.konux.com'
+  ),
+  new Experience(
+		6,
+		'2016',
+		'04/16-06/16',
+		'UK',
+		'LeBook',
+		'Marketing Intern',
+		'I helped to organize one of the biggest tradeshows for the creative industry',
+		'',
+		''
+  ),
+  new Experience(
+		5,
+		'2015/16/17',
+		'',
+		'UK',
+		'Lancaster University',
+		'M.Sc. in Management',
+		'I have been taught by professors from Lancaster University as part of my European triple degree study program in Lyon and Munich',
+		'A+ (with distinction)',
+		''
+	),
+	new Experience(
+		14,
+		'2013/14',
+		'10/13-04/14',
+		'Germany',
+		'Allianz Deutschland AG',
+		'Personal & Organizational Development Intern',
+		'Insurance company',
+		'Accomplishments: Preparing prospective leaders for the AC: via seminars & social projects; Social project management: School project with prospective leaders',
+		'',
+		'https://www.allianz.de'
+	),
+	new Experience(
+		2,
+		'2012/13',
+		'08/12-03/13',
+		'Spain',
+		'Universidad de Salamanca',
+		'Exchange Student for one semester',
+		'I studied Psychology in Spanish at the University as part of the Erasmus program',
+		'',
+		''
+  ),
+  new Experience(
+		16,
+		'2011-15',
+		'10/11-08/15',
+		'Germany',
+		'University of Konstanz',
+		'B.Sc. in Psychology',
+		'I studied Psychology and researched mainly quantitatively in the field of decision sciences',
+		'A',
+		'www.ironhack.com'
+	),
+  new Experience(
+		10,
+		'2008',
+		'02/08-06/08',
+		'USA',
+		'Memorial High School',
+		'Sophmore Year Student',
+		`I have spent part of my sophmore year at an American high school in Houston, TX.`,
+		'',
+		''
+	),
+];

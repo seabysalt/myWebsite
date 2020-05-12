@@ -1,0 +1,29 @@
+@import 'general/_config';
+@import 'general/_fonts';
+@import 'general/_buttons';
+@import 'general/_headings';
+@import 'general/_animations';
+@import 'general/_box';
+@import 'general/_footer';
+
+@import 'home/_home';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  background-color: $light-color;
+  font-family: "gotham_light";
+  line-height: 1.15;
+  outline: none;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+
+button:focus, input:focus, path:focus, textarea:focus {
+  outline: none;
+}

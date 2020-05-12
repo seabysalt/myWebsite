@@ -1,0 +1,269 @@
+/* =======================
+
+Scroll Animation 
+
+==========================*/
+
+$ani-speed: 4s;
+$ani-delay: 2s;
+
+.arrow {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+  margin-top: 30px;
+}
+
+.arrow-first {
+  animation: arrow-movement $ani-speed ease-in-out infinite;
+}
+
+.arrow-second {
+  animation: arrow-movement $ani-speed $ani-delay ease-in-out infinite;
+}
+
+.arrow:before,
+.arrow:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+}
+
+.arrow:before {
+  transform: rotate(45deg) translateX(-23%);
+  transform-origin: top left;
+}
+
+.arrow:after {
+  transform: rotate(-45deg) translateX(23%);
+  transform-origin: top right;
+}
+
+// Animation
+@keyframes arrow-movement {
+  0% {
+    opacity: 0;
+    top: 43%;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* =======================
+
+Text Animation 
+
+==========================*/
+
+// Flying in from above
+
+.tracking-in-expand-fwd-top {
+  -webkit-animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  transition: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+    transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+// Flying in from below
+
+.tracking-in-expand-fwd-bottom {
+  -webkit-animation: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  transition: tracking-in-expand-fwd-bottom 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* =======================
+
+Arrow Spinner 
+
+==========================*/
+
+.arrow_spinner {
+  outline: none;
+
+  &_btn {
+    position: relative;
+    display: block;
+    height: 48px;
+    width: 48px;
+    line-height: 48px;
+    /*   background-color: #ffffff1a; */
+    color: #fff;
+    font-size: 1.125rem;
+    border-radius: 100%;
+    border: none;
+    z-index: 10;
+    transition: .4s;
+    transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+
+    &:hover {
+      /*   background-color: $secondary-color; */
+      opacity: 0.5;
+    }
+  }
+
+  &_icon {
+    width: 20px;
+    position: absolute;
+    bottom: 13px;
+    right: 5px;
+    z-index: 11;
+  }
+
+}
+
+/* ====================
+
+Intro Slide Animations 
+
+======================= */
+
+#introSlides {
+  @keyframes fade-in {
+    from {
+      transform: translateX(-100%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+}
+
+/* ============================
+Box 
+=============================== */
+
+// Animation
+@keyframes pulse {
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+/* ============================
+Navbar
+=============================== */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

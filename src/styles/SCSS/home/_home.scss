@@ -1,0 +1,13 @@
+@import 'cover/_cover';
+@import 'experiences';
+@import 'navbar';
+@import 'projects';
+@import 'contact';
+
+
+.home_content {
+  background-color: $light-color;
+  height: 100%;
+  margin-bottom: 285px;
+  position: relative;
+}

@@ -1,0 +1,49 @@
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include set-flex-row(space-between, center);
+  padding: 30px;
+  background-color: transparent;
+  min-height: 60px;
+  z-index: 100;
+  animation: opacity 0.4s ease-in-out;
+
+  h3 {
+    width: 30%;
+    color: $light-color;
+    cursor: pointer;
+  }
+
+  .navbar_sections {
+    @include set-flex-row(space-between, center);
+    padding-right: 15px;
+
+    p {
+      cursor: pointer;
+      margin: 0 20px;
+
+      &:hover {
+        border-bottom: 2px solid;
+        line-height: 25px;
+      }
+    }
+  }
+}
+
+.scrollUp {
+  background-color: $light-color !important;
+  animation: slideIn 0.4s ease-in-out !important;
+  position: sticky !important;
+  border-bottom: 1px solid rgba(40,40,40,.1);
+
+  h3, .navbar_sections {
+    color: $taupe !important;
+  }
+}
+
+.test {
+  @include set-bg($secondary-color);
+  height: 100vh;
+}

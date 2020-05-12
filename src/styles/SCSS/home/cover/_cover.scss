@@ -1,0 +1,28 @@
+@import 'introSlides';
+
+$height: 100vh;
+$navHeight: 94px;
+
+#cover {
+  /* height: calc(#{$height} - #{$navHeight}); */
+  height: 100vh;
+  width: 100vw;
+  background-color: $light-color;
+  position:  static;
+  margin-bottom: 94px;
+
+  .scroll {
+    position: absolute;
+    top: 70vh;
+    height: 200px;
+    width: 100vw;
+    @include set-flex-column(center, center);
+
+    p {
+      font-size: 12px;
+      color: $light-color;
+      margin-left: 12px;
+      font-family: "gotham_medium";
+    }
+  }
+}
