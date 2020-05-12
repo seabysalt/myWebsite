@@ -9,7 +9,7 @@ export const PROJECTS = [
 		'React.js, SCSS, Node.js, JavaScript(ES6)',
 		'Netlify',
 		'3 days',
-		'https://github.com/seabysalt/sarah-alt-design',
+		'https://github.com/seabysalt/myWebsite',
 		'',
 		'https://res.cloudinary.com/seabysaltdesign/image/upload/q_auto/v1589302900/Images/ThisWebsite_xjqqo1.webp',
 		'',
