@@ -10,7 +10,7 @@ export const PROJECTS = [
 		'Netlify',
 		'3 days',
 		'https://github.com/seabysalt/myWebsite',
-		'',
+		'https://youtu.be/TxaH4EGd_iQ',
 		'https://res.cloudinary.com/seabysaltdesign/image/upload/q_auto/v1589302900/Images/ThisWebsite_xjqqo1.webp',
 		'',
 		'#FF5B3E',
