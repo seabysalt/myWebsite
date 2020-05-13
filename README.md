@@ -1,8 +1,6 @@
-# 
+# My Website
 
-Project 3 - App based on Positive Psychology
-
-Built in 6 days in pair programming (3 team members)
+My Portfolio to show part of my skills, experiences and personality
 
 ## Demo
 
