@@ -44,7 +44,7 @@
 
   width: calc(#{$w} - #{$p});
   height: auto;
-  padding: 50px;
+  padding: 20px;
   border-bottom: 3px solid;
   border-top: 3px solid;
   animation: slideIn 1s ease-in-out;
@@ -54,6 +54,7 @@
   @include lg {
     @include set-flex-row(flex-start, flex-start);
     width: auto;
+    padding: 50px;
   }
 
   @include xxl {

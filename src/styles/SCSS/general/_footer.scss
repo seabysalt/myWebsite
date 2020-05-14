@@ -17,6 +17,7 @@
 
   &_wrapper {
     width: 100%;
+    text-align: center;
     @include set-flex-column(center, center);
 
     h5, h6 {
@@ -75,14 +76,22 @@
 
   .jobSticker2_wrapper {
     position: relative;
-    bottom: 10vh;
+    bottom: 5vh;
     right: -35vw;
     height: 5px;
 
+    @include lg {
+      bottom: 10vh
+    }
+
     .jobSticker2 {
-      width: 120px;
+      width: 70px;
       height: auto;
-      transform: rotate(10deg)
+      transform: rotate(10deg);
+
+      @include lg {
+        width: 120px
+      }
     }
   }
 }
