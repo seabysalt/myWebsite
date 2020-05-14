@@ -53,11 +53,11 @@ class Experiences extends Component {
 							{experience.map((eachExperience, index) => {
 								return (
 									<div className="experience_details" key={index}>
-										<div className="experience_details_year">{eachExperience.year}</div>
-										<div className="experience_details_institution">
+										<p className="experience_details_year">{eachExperience.year}</p>
+										<p className="experience_details_institution">
 											{eachExperience.institution}
-										</div>
-										<div className="experience_details_title">{eachExperience.title}</div>
+										</p>
+										<p className="experience_details_title">{eachExperience.title}</p>
 									</div>
 								)
 							})}

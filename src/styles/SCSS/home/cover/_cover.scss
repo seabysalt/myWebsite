@@ -13,16 +13,42 @@ $navHeight: 94px;
 
   .scroll {
     position: absolute;
-    top: 70vh;
+    top: 65vh;
     height: 200px;
     width: 100vw;
     @include set-flex-column(center, center);
 
+    @include cwh(375, 812) {
+      top: 70vh;
+    }
+
+    @include xl {
+      top: 70vh;
+    }
+    @include xxl {
+      top: 75vh;
+    }
+
     p {
-      font-size: 12px;
+      font-size: 10px;
       color: $light-color;
       margin-left: 12px;
       font-family: "gotham_medium";
+
+      @include lg {
+        font-size: 12px;
+      }
+
+      @include xl {
+        font-size: 12px;
+      }
+      @include xxl {
+        font-size: 14px;
+      }
+
+      @include xxxl {
+        font-size: 18px;
+      }
     }
   }
 }

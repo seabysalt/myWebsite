@@ -1,6 +1,11 @@
 h1 {
   font-family: "gotham_light";
   text-transform: uppercase;
+  font-size: 30px;
+
+  @include sm {
+    font-size: 35px;
+  }
 
   @include md {
     font-size: 45px;
@@ -11,28 +16,36 @@ h1 {
   }
 
   @include xl {
-    font-size: 65px;
+    font-size: 55px;
   }
 
   @include xxl {
-    font-size: 80px;
+    font-size: 70px;
   }
 
   @include xxxl {
-    font-size: 90px;
+    font-size: 110px;
   }
 }
 
 h2 {
   font-family: "gotham_extra_light";
   text-transform: uppercase;
+  font-size: 28px;
 
+  @include sm {
+    font-size: 30px;
+  }
 
   @include md {
     font-size: 40px;
   }
 
   @include lg {
+    font-size: 45px;
+  }
+
+  @include xl {
     font-size: 45px;
   }
 
@@ -48,7 +61,11 @@ h2 {
 h3 {
   font-family: "gotham_extra_light";
   text-transform: uppercase;
+  font-size: 16px;
 
+  @include sm {
+    font-size: 20px;
+  }
 
   @include md {
     font-size: 25px;
@@ -58,12 +75,16 @@ h3 {
     font-size: 30px;
   }
 
+  @include xl {
+    font-size: 30px;
+  }
+
   @include xxl {
     font-size: 45px;
   }
 
   @include xxxl {
-    font-size: 50px;
+    font-size: 55px;
   }
 }
 
@@ -80,7 +101,11 @@ h5 {
   font-family: "gotham_light";
   font-size: 20px;
   text-transform: uppercase;
+  font-size: 14px;
 
+  @include sm {
+    font-size: 16px;
+  }
 
   @include md {
     font-size: 20px;
@@ -89,6 +114,11 @@ h5 {
   @include lg {
     font-size: 20px;
   }
+
+  @include xl {
+    font-size: 20px;
+  }
+
 
   @include xxl {
     font-size: 30px;
@@ -103,4 +133,32 @@ h6 {
   font-family: "gotham_light";
   font-size: 18px;
   text-transform: uppercase;
+}
+
+p, span, input, textarea, label, button {
+  font-size: 12px;
+
+  @include sm {
+    font-size: 12px;
+  }
+
+  @include md {
+    font-size: 12px;
+  }
+
+  @include lg {
+    font-size: 14px;
+  }
+
+  @include xl {
+    font-size: 16px;
+  }
+
+  @include xxl {
+    font-size: 20px;
+  }
+
+  @include xxxl {
+    font-size: 28px;
+  }
 }

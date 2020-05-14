@@ -106,3 +106,9 @@ $screen-xxxl-min: 2000px;
       @content;
   }
 }
+
+@mixin cwh($width, $height) {
+  @media (min-width: $width+'px') and (min-height: $height+'px') {
+      @content;
+  }
+}

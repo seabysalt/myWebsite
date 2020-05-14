@@ -25,13 +25,43 @@
     }
   }
 
-  .text {
-    max-width: 420px;
+  .text, .text2 {
     position: absolute;
-    left: 100px;
     top: 25vh;
     color: $light-color;
     z-index: 3;
+    max-width: 130px;
+    left: 30px;
+
+    @include sm {
+      max-width: 150px;
+      left: 50px;
+    }
+  
+    @include md {
+      max-width: 200px;
+      left: 100px;
+    }
+  
+    @include lg {
+      max-width: 400px;
+      left: 80px;
+    }
+  
+    @include xl {
+      max-width: 420px;
+      left: 100px;
+    }
+  
+    @include xxl {
+      max-width: 500px;
+      left: 150px;
+    }
+  
+    @include xxxl {
+      max-width: 600px;
+      left: 200px;
+    }
 
     h5 {
       margin-bottom: 40px;
@@ -41,24 +71,44 @@
 
   .text2 {
     max-width: 550px;
-    position: absolute;
-    left: 100px;
-    top: 25vh;
-    color: $light-color;
-    z-index: 3;
 
-    h5 {
-      margin-bottom: 40px;
+    @include sm {
+      max-width: 150px;
+    }
+  
+    @include md {
+      max-width: 200px;
+
+    }
+  
+    @include lg {
+      max-width: 550px;
+
+    }
+  
+    @include xl {
+      max-width: 600px;
+
+    }
+  
+    @include xxl {
+      max-width: 800px;
+
+    }
+  
+    @include xxxl {
+      max-width: 900px;
+
     }
   }
 
-  $size: 500px;
+  $size: 40vw;
 
   .image {
     position: absolute;
     left: 50%;
     top: 20vh;
-    height: 28vw;
+    height: 50vh;
     width: 40vw;
 
     .images {
@@ -118,7 +168,7 @@
       }
 
       p {
-        font-size: 13px;
+       /*  font-size: 13px; */
       }
     }
   }
