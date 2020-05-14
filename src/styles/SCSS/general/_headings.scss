@@ -143,11 +143,11 @@ p, span, input, textarea, label, button {
   }
 
   @include md {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   @include lg {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   @include xl {
