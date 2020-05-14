@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
-import ArrowSpinner from '../General/ArrowSpinner';
+/* import ArrowSpinner from '../General/ArrowSpinner'; */
 import { INTROS } from '../../data/Intros';
+import asyncComponent from '../hoc/asyncComponent';
+
+const AsyncArrowSpinner = asyncComponent(() => {
+    return import('../General/ArrowSpinner');
+});
 
 class IntroSlides extends Component {
 	constructor(props) {
@@ -118,7 +123,7 @@ class IntroSlides extends Component {
 							<p>/</p>
 							<p>03</p>
 						</div>
-						<ArrowSpinner time={this.state.time} color={intro.color} next={this.next} />
+						<AsyncArrowSpinner time={this.state.time} color={intro.color} next={this.next} />
 					</div>
 				</div>
 			</div>
