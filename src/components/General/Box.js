@@ -16,9 +16,9 @@ export default class Box extends Component {
   render() {
     const item = this.props.item
     return (
-      <div className={`${this.state.clicked && 'box_clicked'} box`} style={{backgroundColor: item.color, width: '100px', cursor:'pointer'}}
+      <div className={`${this.state.clicked && 'box_clicked'} box`} style={{backgroundColor: item.color, cursor:'pointer'}}
       onClick={() => this.toggle(item.id)} key={item.id}>
-        <img className="box_image" src={item.imageUrl} alt=""/>
+        <img className="box_image" src={item.imageUrl} alt={item.title}/>
       </div>
     )
   }

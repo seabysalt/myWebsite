@@ -22,9 +22,18 @@ $navHeight: 94px;
       top: 70vh;
     }
 
+    @include sm {
+      top: 70vh;
+    }
+
+    @include lg {
+      top: 75vh;
+    }
+
     @include xl {
       top: 70vh;
     }
+
     @include xxl {
       top: 75vh;
     }

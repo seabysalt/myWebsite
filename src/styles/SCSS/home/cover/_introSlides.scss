@@ -110,7 +110,6 @@
   
     @include xl {
       max-width: 550px;
-
     }
   
     @include xxl {
@@ -129,9 +128,15 @@
   .image {
     position: absolute;
     left: 50%;
-    top: 20vh;
-    height: 50vh;
+    top: 44vh;
+    height: 30vh;
     width: 40vw;
+
+    @include xl {
+      left: 50%;
+      top: 20vh;
+      height: 50vh;
+    }
 
     .images {
       width: 100%;

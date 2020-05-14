@@ -6,7 +6,8 @@ export default class ExpandedBox extends Component {
 		super(props);
 		this.state = {
 			width: 0,
-			playerWidth: 0,
+			playerWidthLandScape: 0,
+			playerWidthMobile: 0,
 		};
 		window.addEventListener('resize', this.update);
 	}
@@ -18,7 +19,8 @@ export default class ExpandedBox extends Component {
 	update = () => {
 		this.setState({
 			width: window.innerWidth,
-			playerWidth: 0.35 * window.innerWidth,
+			playerWidthLandScape: 0.35 * window.innerWidth,
+			playerWidthMobile: 0.8 * window.innerWidth,
 		});
 	};
 
@@ -32,7 +34,7 @@ export default class ExpandedBox extends Component {
 				style={{ borderTopColor: color, borderBottomColor: color }}
 			>
 				<div className="video">
-					<ReactPlayer url={item.demoLink} playing width={this.state.playerWidth} />
+					<ReactPlayer url={item.demoLink} playing width={(this.state.width < 1024) ? this.state.playerWidthMobile : this.state.playerWidthLandScape} />
 				</div>
 				<div className="info">
 					<h3 style={{ color: color }}>{item.title}</h3>

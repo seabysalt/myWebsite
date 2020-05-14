@@ -2,6 +2,7 @@
   width: 100vw;
   height: auto;
   padding: 40px;
+  @include set-flex-row(center, center);
 }
 
 .projects_overview {
@@ -10,11 +11,25 @@
   width: 100%;
   height: 100%;
 
+  @include xxl {
+    @include set-flex-row(center, center);
+  }
+
   &_title {
     @include set-flex-row(center, center);
     margin: 20px;
-    width: 350px;
-    height: 350px;
+    width: 85vw;
+    height: 85vw;
+
+    @include cw(768) {
+      width: 25vw;
+      height: 25vw;
+    }
+  
+    @include xxxl {
+      width: 500px;
+      height: 500px;
+    }
   }
 
   h2 {
