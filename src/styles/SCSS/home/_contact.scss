@@ -1,17 +1,27 @@
 .contact {
   @include set-flex-row(space-between, center);
+  height: auto;
+  margin-bottom: 285px;
 
   $background: #9BA59C;
 
   &_background {
     position: absolute;
     left: 0;
-    top: 25vh;
-    width: 66vw;
+    top: 15vh;
+    width: 80vw;
     height: 60vh;
     background-color: $background;
     animation: 1.3s fade-in ease-in-out;
     z-index: 3;
+
+    @include md {
+      top: 25vh;
+    }
+
+    @include lg {
+      width: 66vw;
+    }
   }
 
   h2 {
@@ -37,12 +47,25 @@
 
   &_form {
     position: relative;
-    width: 600px;
-    left: 30vw;
+    width: 300px;
+    left: 10vw;
     background-color: $light-color;
     padding: 20px;
     @include set-flex-column(center, center);
     border: 3px solid $background;
+
+    @include md {
+      left: 30vw;
+      width: 500px;
+    }
+
+    @include lg {
+      width: 600px;
+    }
+
+    @include xl {
+      width: 50vw;
+    }
 
 
     form {
@@ -50,8 +73,16 @@
       height: 300px;
       @include set-flex-column(space-evenly, flex-start);
       z-index: 4;
-      padding: 10px 30px;
-      /*       border: 1px solid $background; */
+      padding: 10px 10px;
+
+      @include md {
+        padding: 10px 30px;
+      }
+
+      @include xxl {
+        height: auto;
+        margin: 10px 80px;
+      }
 
       label {
         font-family: "gotham_medium";
@@ -62,17 +93,28 @@
       textarea {
         border: none;
         padding: 10px;
-        margin: 10px 0 10px 20px;
+        margin: 10px 20px;
         background-color: lighten($background, 20);
         color: $taupe;
-        width: 300px;
+        width: 85%;
         font-family: "gotham_light";
-/*         font-size: 16px; */
+
+        @include md {
+          width: 300px;
+        }
+
+        @include xl {
+          width: 30vw;
+        }
       }
 
       .message {
         height: 80px;
         resize: none;
+
+        @include xl {
+          height: 200px;
+        }
       }
     }
 
@@ -87,14 +129,43 @@
       bottom: -20px;
       font-family: 'gotham_medium';
       text-transform: uppercase;
-      /* font-size: 16px; */
+      font-size: 14px;
       border: 1px solid $light-color;
       cursor: pointer;
+
+      @include sm {
+        font-size: 14px;
+      }
+    
+      @include md {
+        font-size: 16px;
+      }
+    
+      @include lg {
+        font-size: 18px;
+      }
+    
+      @include xl {
+        font-size: 18px;
+        width: 200px;
+        height: 50px;
+      }
+    
+      @include xxl {
+        font-size: 24px;
+        width: 280px;
+        height: 70px;
+      }
+    
+      @include xxxl {
+        font-size: 32px;
+        width: 400px;
+        height: 80px;
+      }
     }
 
     .alert {
       font-family: "gotham_medium";
-      /* font-size: 14px; */
       position: absolute;
       right: 30px;
       top: 100px;
