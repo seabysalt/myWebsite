@@ -110,10 +110,7 @@
     &_year {
       color: $secondary-color;
       font-family: 'gotham_medium';
-      width: 50px;
-      @include lg {
-        width: 80px;
-      }
+      width: 90px;
     }
 
     &_institution {
