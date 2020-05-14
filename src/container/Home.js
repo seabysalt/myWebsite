@@ -13,6 +13,10 @@ class Home extends Component {
 		super(props);
 		this.state = {
 			didMount: false,
+			time: 300,
+			hoverColor: "#235867",
+			slide2: false,
+			slide3: false,
 			lastScrollTop: 0,
 			scrollUp: false,
 			width: 0,
@@ -41,7 +45,26 @@ class Home extends Component {
 		this.scrollOnMount();
 
 		console.log(this.state.loadOnMount);
+
+		this.myInterval = setInterval(() => {
+			this.setState(({ time }) => ({
+				time: time - 1,
+			}));
+			if (this.state.time === 0 && this.state.slide3) {
+				clearInterval(this.myInterval);
+			}
+			if (this.state.time === 0) {
+				this.setState({ slide2: true, hoverColor: "#45B671" });
+			}
+			if (this.state.time === -300) {
+				this.setState({ slide3: true, hoverColor: "#ff5b3e" });
+			} else if (this.state.time === -605) {
+				clearInterval(this.myInterval, this.setState({hoverColor: "#235867"}));
+			}
+		}, 30);
 	}
+
+
 
 	scrollOnMount = () => {
 		this.setState(this.props.location.state, () => {
@@ -94,6 +117,7 @@ class Home extends Component {
 
 	componentWillUnmount() {
 		this.setState({ loadOnMount: 'top' });
+		clearInterval(this.myInterval);
 	}
 
 	render() {
@@ -109,7 +133,7 @@ class Home extends Component {
 					main={() => this.main()}
 					colorTitle="#fafafafa"
 					colorMenu="#333333"
-					hoverColor="#ff5b3e"
+					hoverColor={this.state.hoverColor}
 				/>
 				<div className="home_content">
 					<Cover jumpToExperiences={this.jumpToExperiences} />
