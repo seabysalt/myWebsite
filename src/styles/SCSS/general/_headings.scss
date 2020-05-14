@@ -2,29 +2,65 @@ h1 {
   font-family: "gotham_light";
   text-transform: uppercase;
   font-size: 55px;
+
+  @include xxl {
+    font-size: 80px;
+  }
+
+  @include xxl {
+    font-size: 90px;
+  }
 }
 
 h2 {
   font-family: "gotham_extra_light";
   text-transform: uppercase;
   font-size: 45px;
+
+  @include xxl {
+    font-size: 60px;
+  }
+
+  @include xxl {
+    font-size: 80px;
+  }
 }
 
 h3 {
   font-family: "gotham_extra_light";
   text-transform: uppercase;
   font-size: 30px;
+
+  @include xxl {
+    font-size: 45px;
+  }
+
+  @include xxxl {
+    font-size: 50px;
+  }
 }
 
 h4 {
   font-family: "gotham_medium";
   font-size: 25px;
+
+  @include xxl {
+    font-size: 35px;
+  }
 }
 
 h5 {
   font-family: "gotham_light";
   font-size: 20px;
   text-transform: uppercase;
+
+  @include xxl {
+    font-size: 30px;
+  }
+
+  @include xxxl {
+    font-size: 40px;
+  }
 }
 
 h6 {

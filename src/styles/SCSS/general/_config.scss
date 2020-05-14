@@ -11,6 +11,25 @@ $font-bold: 700;
 $font-regular: 500;
 $font-light: 400;
 
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Extra large desktops
+$screen-xxl-min: 1600px;
+
+// iMac Size
+$screen-xxxl-min: 2000px;
+
+
 // Setting my text color based on bg
 @function set-text-color($color) {
   @if (lightness($color) > 70) {
@@ -38,4 +57,52 @@ $font-light: 400;
   flex-direction: column;
   justify-content: $direction1;
   align-items: $direction2;
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+      @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+      @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+      @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+      @content;
+  }
+}
+
+// Extra extra large devices
+@mixin xxl {
+  @media (min-width: #{$screen-xxl-min}) {
+      @content;
+  }
+}
+
+// iMac Size
+@mixin xxxl {
+  @media (min-width: #{$screen-xxxl-min}) {
+      @content;
+  }
+}
+
+// Custom devices
+@mixin cw($screen) {
+  @media (min-width: $screen+'px') {
+      @content;
+  }
 }
