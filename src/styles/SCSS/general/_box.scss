@@ -13,11 +13,6 @@
     margin: 20px;
   }
 
-  @include xxxl {
-    width: 500px;
-    height: 500px;
-  }
-
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 10px;
   }
@@ -30,11 +25,6 @@
     @include cw(768) {
       max-width: 22vw;
       max-height: 22vw;
-    }
-
-    @include xxxl {
-      width: 480px;
-      height: 480px;
     }
 
     &:hover {
@@ -54,7 +44,7 @@
 
   width: calc(#{$w} - #{$p});
   height: auto;
-  padding: 20px;
+  padding: 50px;
   border-bottom: 3px solid;
   border-top: 3px solid;
   animation: slideIn 1s ease-in-out;
@@ -66,6 +56,10 @@
     width: auto;
   }
 
+  @include xxl {
+    padding: 100px;
+  }
+
   .info {
     padding-top: 20px;
 
@@ -73,8 +67,12 @@
      padding: 0 50px;
     }
 
+    @include xxxl {
+      padding: 0 100px;
+     }
+
     h3 {
-      margin: 20px 0;
+      margin: 0 0 20px 0;
     }
 
     p {
