@@ -88,6 +88,7 @@
       width: 70px;
       height: auto;
       transform: rotate(10deg);
+      cursor: pointer;
 
       @include lg {
         width: 120px
