@@ -36,6 +36,17 @@ export const EXPERIENCES = [
 		'https://www.ironhack.com'
 	),
 	new Experience(
+    17,
+    '2018/19',
+    '04/18-12/19',
+    'Germany',
+    'University of Konstanz',
+    'M.Sc. in Psychology',
+    'Finalized my studies in (clinical) Psychology.',
+    'A+ (with distinction)',
+    'https://www.uni-konstanz.de/'
+  ),
+	new Experience(
 		11,
 		'2018/19',
 		'09/18-03/18',
@@ -46,17 +57,6 @@ export const EXPERIENCES = [
 		'Accomplishments: Coaching & developing leads: developing and conducting management & team lead trainings to junior& senior leads; Project management: mainly for cross-functional teams - organising, leading and moderating events with up to 120 attendees',
 		'',
 		'https://www.personio.com'
-  ),
-  new Experience(
-    17,
-    '2018/19',
-    '04/18-12/19',
-    'Germany',
-    'University of Konstanz',
-    'M.Sc. in Psychology',
-    'Finalized my studies in (clinical) Psychology.',
-    'A+ (with distinction)',
-    'https://www.uni-konstanz.de/'
   ),
 	new Experience(
 		12,
