@@ -154,11 +154,13 @@
 
     .images2 {
       transform: rotateY(90deg);
+      z-index: 2;
       
     }
 
     .images3 {
       transform: rotateY(180deg);
+      z-index: 2;
     }
 
     &_sliding {
@@ -166,6 +168,7 @@
       width: inherit;
       height: inherit;
       position: absolute;
+      z-index: 2;
     }
 
     &_fade-in {
@@ -175,10 +178,12 @@
 
     &_fade-in-2{
       transform: rotateY(-90deg) translate3d(0, 0, $size/2);
+      z-index: 2;
     }
 
     &_fade-in-3 {
       transform: rotateY(180deg) translate3d(0, 0, $size/2);
+      z-index: 2;
     }
 
     &_control {
@@ -189,7 +194,7 @@
       width: 30px;
       color: $light-color;
       font-family: "gotham_semi_bold";
-      z-index: 3;
+      z-index: 50;
       @include set-flex-column(space-between, center);
 
       @include lg {
@@ -205,6 +210,7 @@
         transform: rotate(90deg);
         @include set-flex-row(space-between, center);
         width: 30px;
+        z-index: 50;
 
         @include lg {
           width: 60px;
@@ -213,6 +219,7 @@
 
       p {
         font-size: 8px;
+        z-index: 50;
 
         @include lg {
           font-size: 13px;
