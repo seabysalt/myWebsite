@@ -172,10 +172,9 @@ Arrow Spinner
   &_btn {
     position: relative;
     display: block;
-    height: 48px;
-    width: 48px;
-    line-height: 48px;
-    /*   background-color: #ffffff1a; */
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
     color: #fff;
     font-size: 1.125rem;
     border-radius: 100%;
@@ -190,18 +189,29 @@ Arrow Spinner
     margin: 0;
     overflow: hidden;
 
+    @include lg {
+      height: 48px;
+      width: 48px;
+      line-height: 48px;
+    }
+
     &:hover {
-      /*   background-color: $secondary-color; */
       opacity: 0.5;
     }
   }
 
   &_icon {
-    width: 20px;
+    width: 7px;
     position: absolute;
-    bottom: 13px;
-    right: 5px;
+    bottom: 6px;
+    right: 11px;
     z-index: 11;
+
+    @include lg {
+      width: 20px;
+      bottom: 13px;
+      right: 5px;
+    }
   }
 
 }

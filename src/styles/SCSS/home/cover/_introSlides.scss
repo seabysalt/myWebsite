@@ -132,6 +132,10 @@
     height: 30vh;
     width: 40vw;
 
+    @include lg {
+      height: 35vh;
+    }
+
     @include xl {
       left: 50%;
       top: 20vh;
@@ -179,23 +183,44 @@
 
     &_control {
       position: absolute;
-      right: 15px;
+      right: 2px;
       bottom: 15px;
-      height: 100px;
+      height: 50px;
       width: 30px;
       color: $light-color;
       font-family: "gotham_semi_bold";
       z-index: 3;
       @include set-flex-column(space-between, center);
 
+      @include lg {
+        height: 100px;
+        right: 15px;
+      }
+
+      @include xxl {
+        height: 130px;
+      }
+
       &_text {
         transform: rotate(90deg);
         @include set-flex-row(space-between, center);
-        width: 60px;
+        width: 30px;
+
+        @include lg {
+          width: 60px;
+        }
       }
 
       p {
-       /*  font-size: 13px; */
+        font-size: 8px;
+
+        @include lg {
+          font-size: 13px;
+        }
+
+        @include xxl {
+          font-size: 16px;
+        }
       }
     }
   }
