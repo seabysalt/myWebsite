@@ -25,7 +25,7 @@ export const PROJECTS = [
 		'Netlify',
 		'8 weeks',
 		'https://github.com/florian-hartl/webapp',
-		'https://youtu.be/A5Dk2LLKkCM',
+		'https://youtu.be/HalrNmhC2XY',
 		'https://res.cloudinary.com/seabysaltdesign/image/upload/q_auto/v1589136830/Images/Scenerie_rez2dy.png',
 		'www.scenerie.co',
 		'#c4c3c3',
