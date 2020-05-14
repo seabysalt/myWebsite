@@ -1,15 +1,18 @@
 @import 'introSlides';
 
-$height: 100vh;
-$navHeight: 94px;
 
 #cover {
+  $height: 100vh;
+  $navHeight: 94px;
   /* height: calc(#{$height} - #{$navHeight}); */
   height: 100vh;
   width: 100vw;
   background-color: $light-color;
   position:  static;
-  margin-bottom: 94px;
+
+  @include xl {
+    margin-bottom: 94px;
+  }
 
   .scroll {
     position: absolute;

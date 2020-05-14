@@ -1,13 +1,14 @@
 #experiences {
-  height: 100vh;
+  height: auto;
   width: 100vw;
-  padding: 20px 40px;
-  margin-top: 94px;
+  padding: 20px 40px 40px 40px;
 
   @include set-flex-column(center, center);
 
   @include xl {
     @include set-flex-row(center, center);
+    height: 100vh;
+    margin-top: 94px;
   }
 
   .map {
@@ -18,20 +19,45 @@
 
     &_countries {
       @include set-flex-row(space-evenly, center);
+      flex-flow: wrap;
       padding: 20px 0px;
       align-content: center;
 
       p {
         color: lighten($dark-text, 35%);
-      /*   font-size: 14px; */
         line-height: 20px;
+        margin: 5px;
       }
 
       .active {
         color: $secondary-color;
         font-weight: 600;
-        /* font-size: 18px; */
         text-transform: uppercase;
+        font-size: 14px;
+
+        @include sm {
+          font-size: 14px;
+        }
+      
+        @include md {
+          font-size: 16px;
+        }
+      
+        @include lg {
+          font-size: 18px;
+        }
+      
+        @include xl {
+          font-size: 18px;
+        }
+      
+        @include xxl {
+          font-size: 24px;
+        }
+      
+        @include xxxl {
+          font-size: 32px;
+        }
       }
 
       .inactive:hover {
@@ -40,7 +66,18 @@
     }
 
     &_detail {
-      padding: 0 50px;
+      padding: 0 10px;
+      width: 90vw;
+
+      @include sm {
+        width: 65vw;
+        padding: 0 20px;
+      }
+
+      @include xl {
+        width: auto;
+        padding: 0 50px;
+      }
 
       .rsm-marker {
         cursor: pointer;
@@ -73,12 +110,19 @@
     &_year {
       color: $secondary-color;
       font-family: 'gotham_medium';
-      width: 80px;
+      width: 50px;
+      @include lg {
+        width: 80px;
+      }
     }
 
     &_institution {
-      padding-left: 30px;
+      padding-left: 10px;
       width: 35%;
+      @include lg {
+        padding-left: 30px;
+        width: 35%;
+      }
     }
 
     &_title {

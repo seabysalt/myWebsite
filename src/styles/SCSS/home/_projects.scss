@@ -19,7 +19,7 @@
     @include set-flex-row(center, center);
     margin: 20px;
     width: 85vw;
-    height: 85vw;
+    height: 20vh;
 
     @include cw(768) {
       width: 25vw;
