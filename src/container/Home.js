@@ -136,7 +136,7 @@ class Home extends Component {
 					hoverColor={this.state.hoverColor}
 				/>
 				<div className="home_content">
-					<Cover jumpToExperiences={this.jumpToExperiences} />
+					<Cover jumpToExperiences={this.jumpToExperiences} width={this.state.width} key={this.state.width}/>
 					<Experiences experiences={this.experiences} />
 					<Projects
 						projects={this.projects}

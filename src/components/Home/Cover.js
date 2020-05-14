@@ -26,7 +26,7 @@ class Cover extends Component {
 	render() {
 		return (
 			<div id="cover">
-				<IntroSlides key={this.state.startAgain} refresh={this.startAgain}/>
+				<IntroSlides key={this.state.startAgain} refresh={this.startAgain} width={this.props.width}/>
 				<Scroll jump={this.props.jumpToExperiences} />
 			</div>
 		);

@@ -10,8 +10,10 @@ class IntroSlides extends Component {
 			time: 300,
 			slide2: false,
 			slide3: false,
+			width: this.props.width,
 		};
 		this.next = this.next.bind(this);
+		window.addEventListener('resize', this.update);
 	}
 
 	componentDidMount() {
@@ -61,6 +63,10 @@ class IntroSlides extends Component {
 			intro = INTROS[2];
 		}
 
+		const imageSrc0 = (this.state.width > 1199) ? (INTROS[0].imageUrlDesktop) : (INTROS[0].imageUrlMobile);
+		const imageSrc1 = (this.state.width > 1199) ? (INTROS[1].imageUrlDesktop) : (INTROS[1].imageUrlMobile);
+		const imageSrc2 = (this.state.width > 1199) ? (INTROS[2].imageUrlDesktop) : (INTROS[2].imageUrlMobile);
+
 		return (
 			<div id="introSlides">
 				<div className="background">
@@ -90,15 +96,19 @@ class IntroSlides extends Component {
 				)}
 				<div className="image">
 					<div className={`${this.state.slide2 && 'images2'} images ${this.state.slide3 && 'images3'}`}>
-						<img className={`image_fade-in image_sliding`} src={INTROS[0].imageUrl} alt="Profile_Picture" />
+						<img
+							className={`image_fade-in image_sliding`}
+							src={imageSrc0}
+							alt="Profile_Picture"
+						/>
 						<img
 							className={`image_fade-in-2 image_sliding`}
-							src={INTROS[1].imageUrl}
+							src={imageSrc1}
 							alt="Profile_Picture"
 						/>
 						<img
 							className={`image_fade-in-3 image_sliding`}
-							src={INTROS[2].imageUrl}
+							src={imageSrc2}
 							alt="Profile_Picture"
 						/>
 					</div>
