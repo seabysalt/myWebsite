@@ -1,13 +1,24 @@
 h1 {
   font-family: "gotham_light";
   text-transform: uppercase;
-  font-size: 55px;
+
+  @include md {
+    font-size: 45px;
+  }
+
+  @include lg {
+    font-size: 55px;
+  }
+
+  @include xl {
+    font-size: 65px;
+  }
 
   @include xxl {
     font-size: 80px;
   }
 
-  @include xxl {
+  @include xxxl {
     font-size: 90px;
   }
 }
@@ -15,13 +26,21 @@ h1 {
 h2 {
   font-family: "gotham_extra_light";
   text-transform: uppercase;
-  font-size: 45px;
+
+
+  @include md {
+    font-size: 40px;
+  }
+
+  @include lg {
+    font-size: 45px;
+  }
 
   @include xxl {
     font-size: 60px;
   }
 
-  @include xxl {
+  @include xxxl {
     font-size: 80px;
   }
 }
@@ -29,7 +48,15 @@ h2 {
 h3 {
   font-family: "gotham_extra_light";
   text-transform: uppercase;
-  font-size: 30px;
+
+
+  @include md {
+    font-size: 25px;
+  }
+
+  @include lg {
+    font-size: 30px;
+  }
 
   @include xxl {
     font-size: 45px;
@@ -53,6 +80,15 @@ h5 {
   font-family: "gotham_light";
   font-size: 20px;
   text-transform: uppercase;
+
+
+  @include md {
+    font-size: 20px;
+  }
+
+  @include lg {
+    font-size: 20px;
+  }
 
   @include xxl {
     font-size: 30px;
