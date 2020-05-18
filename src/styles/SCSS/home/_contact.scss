@@ -1,7 +1,7 @@
 .contact {
   @include set-flex-row(space-between, center);
   height: auto;
-  margin-bottom: 58vh;
+/*   margin-bottom: 58vh;
 
   @include cwh(321, 569) {
     margin-bottom: 38vh;
@@ -9,7 +9,7 @@
 
   @include lg {
     margin-bottom: 62vh;
-  }
+  } */
 
   $background: #9BA59C;
 
