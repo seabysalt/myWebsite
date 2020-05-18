@@ -1,7 +1,11 @@
 .contact {
   @include set-flex-row(space-between, center);
   height: auto;
-  margin-bottom: 390px;
+  margin-bottom: 50vh;
+
+  @include cwh(321, 569) {
+    margin-bottom: 30vh;
+  }
 
   $background: #9BA59C;
 

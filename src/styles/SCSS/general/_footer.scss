@@ -6,9 +6,15 @@
   z-index: -1;
   overflow: hidden;
   width: 100vw;
+  background: $grey;
+  @include set-flex-column(center, center);
+  height: 50vh;
+
+  @include cwh(321, 569) {
+    height: 30vh;
+  }
 
   &_top {
-    width: 100%;
     padding: 64px 58px 56px 58px;
     background: $grey;
     width: 100vw;

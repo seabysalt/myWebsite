@@ -29,5 +29,13 @@ button:focus, input:focus, path:focus, textarea:focus {
 }
 
 body, #root {
-  margin-bottom: 380px;
+  margin-bottom: 58vh;
+
+  @include cwh(321, 569) {
+    margin-bottom: 38vh;
+  }
+
+  @include lg {
+    margin-bottom: 62vh;
+  }
 }
