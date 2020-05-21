@@ -96,17 +96,18 @@ class Home extends Component {
 	listenScrollEvent = (e) => {
 		let scrollTop = e.target.scrollingElement.scrollTop,
 			lastScrollTop = this.state.lastScrollTop;
-			console.log(this.state.height/12)
 
-		if (scrollTop < lastScrollTop && scrollTop > this.state.height/12 && !this.state.scrollUp) {
-			this.setState({ scrollUp: true, lastScrollTop: scrollTop });
-		} else if (scrollTop > lastScrollTop && this.state.scrollUp) {
-			this.setState({ scrollUp: false, lastScrollTop: scrollTop });
-		} else if (scrollTop < lastScrollTop && scrollTop < 1 && this.state.scrollUp) {
-			this.setState({ scrollUp: false, lastScrollTop: scrollTop });
-		} else {
-			this.setState({ lastScrollTop: scrollTop });
-		}
+			if (this.state.width > 400) {
+				if (scrollTop < lastScrollTop && scrollTop > this.state.height/12 && !this.state.scrollUp) {
+					this.setState({ scrollUp: true, lastScrollTop: scrollTop });
+				} else if (scrollTop > lastScrollTop && this.state.scrollUp) {
+					this.setState({ scrollUp: false, lastScrollTop: scrollTop });
+				} else if (scrollTop < lastScrollTop && scrollTop < 1 && this.state.scrollUp) {
+					this.setState({ scrollUp: false, lastScrollTop: scrollTop });
+				} else {
+					this.setState({ lastScrollTop: scrollTop });
+				}
+			}
 	};
 
 	update = () => {

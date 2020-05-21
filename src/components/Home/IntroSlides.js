@@ -4,7 +4,7 @@ import { INTROS } from '../../data/Intros';
 import asyncComponent from '../hoc/asyncComponent';
 
 const AsyncArrowSpinner = asyncComponent(() => {
-    return import('../General/ArrowSpinner');
+	return import('../General/ArrowSpinner');
 });
 
 class IntroSlides extends Component {
@@ -68,9 +68,9 @@ class IntroSlides extends Component {
 			intro = INTROS[2];
 		}
 
-		const imageSrc0 = (this.state.width > 1199) ? (INTROS[0].imageUrlDesktop) : (INTROS[0].imageUrlMobile);
-		const imageSrc1 = (this.state.width > 1199) ? (INTROS[1].imageUrlDesktop) : (INTROS[1].imageUrlMobile);
-		const imageSrc2 = (this.state.width > 1199) ? (INTROS[2].imageUrlDesktop) : (INTROS[2].imageUrlMobile);
+		const imageSrc0 = this.state.width > 1199 ? INTROS[0].imageUrlDesktop : INTROS[0].imageUrlMobile;
+		const imageSrc1 = this.state.width > 1199 ? INTROS[1].imageUrlDesktop : INTROS[1].imageUrlMobile;
+		const imageSrc2 = this.state.width > 1199 ? INTROS[2].imageUrlDesktop : INTROS[2].imageUrlMobile;
 
 		return (
 			<div id="introSlides">
@@ -88,34 +88,17 @@ class IntroSlides extends Component {
 						style={{ backgroundColor: INTROS[2].color }}
 					></div>
 				</div>
-				{this.state.slide2 && !this.state.slide3 ? (
-					<div className="text2">
-						<h5 className="tracking-in-expand-fwd-top">{intro.subtitle}.</h5>
-						<h1 className="tracking-in-expand-fwd-top">{intro.title}</h1>
-					</div>
-				) : (
-					<div className="text">
-						<h5 className="tracking-in-expand-fwd-bottom">{intro.subtitle}.</h5>
-						<h1 className="tracking-in-expand-fwd-bottom">{intro.title}</h1>
-					</div>
-				)}
+				<div className="text">
+					<h5 className="tracking-in-expand-fwd-top">{intro.subtitle}.</h5>
+					{intro.title.map((eachTitle, index) => {
+						return <h1 className="tracking-in-expand-fwd-bottom">{eachTitle}</h1>
+					})}
+				</div>
 				<div className="image">
 					<div className={`${this.state.slide2 && 'images2'} images ${this.state.slide3 && 'images3'}`}>
-						<img
-							className={`image_fade-in image_sliding`}
-							src={imageSrc0}
-							alt="Profile_Picture"
-						/>
-						<img
-							className={`image_fade-in-2 image_sliding`}
-							src={imageSrc1}
-							alt="Profile_Picture"
-						/>
-						<img
-							className={`image_fade-in-3 image_sliding`}
-							src={imageSrc2}
-							alt="Profile_Picture"
-						/>
+						<img className={`image_fade-in image_sliding`} src={imageSrc0} alt="Profile_Picture" />
+						<img className={`image_fade-in-2 image_sliding`} src={imageSrc1} alt="Profile_Picture" />
+						<img className={`image_fade-in-3 image_sliding`} src={imageSrc2} alt="Profile_Picture" />
 					</div>
 					<div className="image_control">
 						<div className="image_control_text">

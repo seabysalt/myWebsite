@@ -50,43 +50,44 @@
     }
   }
 
-  .text, .text2 {
+  .text {
     position: absolute;
     top: 15vh;
     color: $light-color;
     z-index: 3;
-    max-width: 200px;
+    width: auto;
     left: 30px;
+    /* max-width: 200px; */
 
     @include sm {
-      max-width: 200px;
+     /*  max-width: 200px; */
       left: 50px;
     }
   
     @include md {
-      max-width: 200px;
+     /*  max-width: 300px; */
       left: 70px;
     }
   
     @include lg {
-      max-width: 400px;
+     /*  max-width: 500px; */
       left: 80px;
       top: 18vh;
     }
   
     @include xl {
-      max-width: 420px;
+     /*  max-width: 520px; */
       left: 100px;
       top: 25vh;
     }
   
     @include xxl {
-      max-width: 500px;
+      /* max-width: 600px; */
       left: 150px;
     }
   
     @include xxxl {
-      max-width: 600px;
+      /* max-width: 700px; */
       left: 200px;
     }
 
@@ -94,33 +95,6 @@
       margin-bottom: 40px;
     }
 
-  }
-
-  .text2 {
-    max-width: 300px;
-  
-    @include md {
-      max-width: 450px;
-    }
-
-    @include lg {
-      max-width: 550px;
-    }
-  
-  
-    @include xl {
-      max-width: 550px;
-    }
-  
-    @include xxl {
-      max-width: 700px;
-
-    }
-  
-    @include xxxl {
-      max-width: 1200px;
-
-    }
   }
 
   $size: 40vw;

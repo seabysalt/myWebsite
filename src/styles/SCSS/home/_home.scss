@@ -8,6 +8,8 @@
 .home_content {
   background-color: $light-color;
   height: 100%;
+  position: relative;
+
   margin-bottom: 59vh;
 
   @include cwh(321, 569) {
@@ -17,5 +19,4 @@
   @include lg {
     margin-bottom: 62vh;
   }
-  position: relative;
 }

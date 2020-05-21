@@ -27,15 +27,3 @@ html, body, #root {
 button:focus, input:focus, path:focus, textarea:focus {
   outline: none;
 }
-
-body, #root {
-/*   margin-bottom: 58vh;
-
-  @include cwh(321, 569) {
-    margin-bottom: 38vh;
-  }
-
-  @include lg {
-    margin-bottom: 62vh;
-  } */
-}
