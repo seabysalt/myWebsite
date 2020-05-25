@@ -1,8 +1,4 @@
 .footer {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: -1;
   overflow: hidden;
   width: 100vw;
@@ -16,6 +12,10 @@
 
   @include md {
     height: 50vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &_top {
