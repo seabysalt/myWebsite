@@ -5,22 +5,20 @@
 @import 'contact';
 
 
+#home {
+  margin-bottom: 58vh;
+
+  @include cwh(321, 569) {
+    margin-bottom: 42vh;
+  }
+
+  @include md {
+    margin-bottom: 58vh;
+  }
+}
+
 .home_content {
   background-color: $light-color;
   height: 100%;
   position: relative;
-
-/*   margin-bottom: 59vh;
-
-  @include cwh(321, 569) {
-    margin-bottom: 44vh;
-  } */
-
-  @include md {
-    margin-bottom: 59vh;
-  }
-
-  @include lg {
-    margin-bottom: 50vh;
-  }
 }

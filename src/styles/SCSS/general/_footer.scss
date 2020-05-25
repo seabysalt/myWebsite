@@ -1,10 +1,10 @@
 .footer {
-/*   position: fixed;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
-  overflow: hidden; */
+  overflow: hidden;
   width: 100vw;
   background: $grey;
   @include set-flex-column(center, center);
@@ -15,12 +15,7 @@
   }
 
   @include md {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    overflow: hidden;
+    height: 50vh;
   }
 
   &_top {
@@ -35,7 +30,8 @@
     text-align: center;
     @include set-flex-column(center, center);
 
-    h5, h6 {
+    h5,
+    h6 {
       margin: 15px 0;
     }
 
@@ -53,13 +49,14 @@
 
     .footer_contact {
       @include set-flex-row(space-around, center);
+
       a {
         border-radius: 50%;
         width: 40px;
         height: 40px;
         margin: 0px 5px;
         @include set-flex-row(center, center);
-        
+
         .social-media-icon {
           width: 20px;
         }
@@ -73,19 +70,19 @@
   }
 
   &_overlay {
-      position: fixed;
-      visibility: hidden;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 100;
-      background-color: $light-color;
-      cursor: pointer;
-      transition: visibility .5s linear 0s,z-index .5s linear 0s,opacity .5s;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: $light-color;
+    cursor: pointer;
+    transition: visibility .5s linear 0s, z-index .5s linear 0s, opacity .5s;
   }
 
   .jobSticker2_wrapper {

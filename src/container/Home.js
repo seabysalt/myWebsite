@@ -14,7 +14,7 @@ class Home extends Component {
 		this.state = {
 			didMount: false,
 			time: 300,
-			hoverColor: "#235867",
+			hoverColor: '#235867',
 			slide2: false,
 			slide3: false,
 			lastScrollTop: 0,
@@ -23,6 +23,7 @@ class Home extends Component {
 			height: 0,
 			showContact: false,
 			loadOnMount: 'top',
+			marginBottom: 0,
 		};
 		this.top = React.createRef();
 		this.experiences = React.createRef();
@@ -32,7 +33,6 @@ class Home extends Component {
 	}
 
 	async componentDidMount() {
-
 		setTimeout(() => {
 			this.setState({ didMount: true });
 		}, 0);
@@ -54,17 +54,15 @@ class Home extends Component {
 				clearInterval(this.myInterval);
 			}
 			if (this.state.time === 0) {
-				this.setState({ slide2: true, hoverColor: "#45B671" });
+				this.setState({ slide2: true, hoverColor: '#45B671' });
 			}
 			if (this.state.time === -300) {
-				this.setState({ slide3: true, hoverColor: "#ff5b3e" });
+				this.setState({ slide3: true, hoverColor: '#ff5b3e' });
 			} else if (this.state.time === -605) {
-				clearInterval(this.myInterval, this.setState({hoverColor: "#235867"}));
+				clearInterval(this.myInterval, this.setState({ hoverColor: '#235867' }));
 			}
 		}, 30);
 	}
-
-
 
 	scrollOnMount = () => {
 		this.setState(this.props.location.state, () => {
@@ -97,23 +95,26 @@ class Home extends Component {
 		let scrollTop = e.target.scrollingElement.scrollTop,
 			lastScrollTop = this.state.lastScrollTop;
 
-			if (this.state.width > 400) {
-				if (scrollTop < lastScrollTop && scrollTop > this.state.height/12 && !this.state.scrollUp) {
-					this.setState({ scrollUp: true, lastScrollTop: scrollTop });
-				} else if (scrollTop > lastScrollTop && this.state.scrollUp) {
-					this.setState({ scrollUp: false, lastScrollTop: scrollTop });
-				} else if (scrollTop < lastScrollTop && scrollTop < 1 && this.state.scrollUp) {
-					this.setState({ scrollUp: false, lastScrollTop: scrollTop });
-				} else {
-					this.setState({ lastScrollTop: scrollTop });
-				}
-			}
+		if (scrollTop < lastScrollTop && scrollTop > this.state.height / 12 && !this.state.scrollUp) {
+			this.setState({
+				scrollUp: true,
+				lastScrollTop: scrollTop,
+				marginBottom: window.innerWidth > 767 ? 0.62 * window.innerHeight : 0,
+			});
+		} else if (scrollTop > lastScrollTop && this.state.scrollUp) {
+			this.setState({ scrollUp: false, lastScrollTop: scrollTop, marginBottom: 0.5 * this.state.height });
+		} else if (scrollTop < lastScrollTop && scrollTop < 1 && this.state.scrollUp) {
+			this.setState({ scrollUp: false, lastScrollTop: scrollTop, marginBottom: 0.5 * this.state.height });
+		} else {
+			this.setState({ lastScrollTop: scrollTop });
+		}
 	};
 
 	update = () => {
 		this.setState({
 			width: window.innerWidth,
 			height: window.innerHeight,
+			marginBottom: window.innerWidth > 767 ? 0.5 * window.innerHeight : 0,
 		});
 	};
 
@@ -137,8 +138,8 @@ class Home extends Component {
 					colorMenu="#333333"
 					hoverColor={this.state.hoverColor}
 				/>
-				<div className="home_content">
-					<Cover jumpToExperiences={this.jumpToExperiences} width={this.state.width} key={this.state.width}/>
+				<div className="home_content" /* style={{ marginBottom: this.state.marginBottom }} */>
+					<Cover jumpToExperiences={this.jumpToExperiences} width={this.state.width} key={this.state.width} />
 					<Experiences experiences={this.experiences} />
 					<Projects
 						projects={this.projects}
