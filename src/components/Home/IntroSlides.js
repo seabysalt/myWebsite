@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 /* import ArrowSpinner from '../General/ArrowSpinner'; */
 import { INTROS } from '../../data/Intros';
 import asyncComponent from '../hoc/asyncComponent';
+import Img from 'react-cloudinary-lazy-image';
 
 const AsyncArrowSpinner = asyncComponent(() => {
 	return import('../General/ArrowSpinner');
@@ -91,11 +92,22 @@ class IntroSlides extends Component {
 				<div className="text">
 					<h5 className="tracking-in-expand-fwd-top">{intro.subtitle}.</h5>
 					{intro.title.map((eachTitle, index) => {
-						return <h1 className="tracking-in-expand-fwd-bottom">{eachTitle}</h1>
+						return <h1 className="tracking-in-expand-fwd-bottom">{eachTitle}</h1>;
 					})}
 				</div>
 				<div className="image">
 					<div className={`${this.state.slide2 && 'images2'} images ${this.state.slide3 && 'images3'}`}>
+{/* 						<div className={`image_fade-in image_sliding`}>
+							<Img
+								cloudName={'seabysaltdesign'}
+								imageName={'imageSrc0'}
+								fluid={{
+									maxWidth: 800,
+									height: 300,
+								}}
+								alt={'1'}
+							/>
+						</div> */}
 						<img className={`image_fade-in image_sliding`} src={imageSrc0} alt="Profile_Picture" />
 						<img className={`image_fade-in-2 image_sliding`} src={imageSrc1} alt="Profile_Picture" />
 						<img className={`image_fade-in-3 image_sliding`} src={imageSrc2} alt="Profile_Picture" />

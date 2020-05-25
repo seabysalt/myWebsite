@@ -10,13 +10,17 @@
   height: 100%;
   position: relative;
 
-  margin-bottom: 59vh;
+/*   margin-bottom: 59vh;
 
   @include cwh(321, 569) {
-    margin-bottom: 39vh;
+    margin-bottom: 44vh;
+  } */
+
+  @include md {
+    margin-bottom: 59vh;
   }
 
   @include lg {
-    margin-bottom: 62vh;
+    margin-bottom: 50vh;
   }
 }

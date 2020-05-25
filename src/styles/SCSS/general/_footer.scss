@@ -1,17 +1,26 @@
 .footer {
-  position: fixed;
+/*   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
-  overflow: hidden;
+  overflow: hidden; */
   width: 100vw;
   background: $grey;
   @include set-flex-column(center, center);
   height: 50vh;
 
   @include cwh(321, 569) {
-    height: 30vh;
+    height: 35vh;
+  }
+
+  @include md {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
   }
 
   &_top {
