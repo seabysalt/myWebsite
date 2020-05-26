@@ -40,7 +40,7 @@ class Contact extends Component {
 	listenScrollEvent = (e) => {
 		let scrollTop = e.target.scrollingElement.scrollTop,
 			lastScrollTop = this.state.lastScrollTop;
-
+			if (this.state.width > 400) {
 		if (scrollTop < lastScrollTop && scrollTop > 94 && !this.state.scrollUp) {
 			this.setState({ scrollUp: true, lastScrollTop: scrollTop });
 		} else if (scrollTop > lastScrollTop && this.state.scrollUp) {
@@ -50,6 +50,7 @@ class Contact extends Component {
 		} else {
 			this.setState({ lastScrollTop: scrollTop });
 		}
+	}
 	};
 
 	update = () => {
